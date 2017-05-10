@@ -1,5 +1,5 @@
-import React, { Children, cloneElement, Component } from 'react';
-import { Link, Router, Route, browserHistory, IndexRoute } from 'react-router';
+import React, { Component } from 'react';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import FieldType from './components/FieldType';
 
@@ -53,7 +53,7 @@ class App extends Component {
 		this.setState({ sidebarIsOpen: !this.state.sidebarIsOpen });
 	}
 	render () {
-		const { children, params } = this.props;
+		const { params } = this.props;
 		const { sidebarIsOpen } = this.state;
 
 		return (
@@ -96,7 +96,8 @@ class App extends Component {
 						);
 					})}
 				</div>
-				<div className="fx-body">{Children.map(children, (child) => {
+				<div className="fx-body">
+					{/*	{Children.map(children, (child) => {
 					if (!params.type) return child;
 
 					const Type = Types[params.type];
@@ -111,7 +112,12 @@ class App extends Component {
 						toggleSidebar: this.toggleSidebar,
 						value: Type.spec.value,
 					});
-				})}</div>
+				})}*/}
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route path=":type" component={FieldType} />
+					</Switch>
+				</div>
 			</div>
 		);
 	}
@@ -129,11 +135,8 @@ const Home = (props) => {
 };
 
 ReactDOM.render(
-	<Router history={browserHistory}>
-		<Route path="/" component={App}>
-			<IndexRoute component={Home} />
-			<Route path=":type" component={FieldType} />
-		</Route>
-	</Router>,
+	<BrowserRouter>}>
+		<Route path="/" component={App} />
+	</BrowserRouter>,
 	document.getElementById('explorer')
 );

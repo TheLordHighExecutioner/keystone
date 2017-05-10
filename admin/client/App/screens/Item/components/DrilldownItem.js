@@ -1,6 +1,6 @@
 import { css } from 'glamor';
 import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { Button, Glyph } from '../../../elemental';
 
 import theme from '../../../../theme';

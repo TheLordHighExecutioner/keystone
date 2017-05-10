@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import demand from 'must';
 import MobileListItem from '../ListItem';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 describe('<MobileListItem />', () => {
 	it('should render a react-router Link', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import demand from 'must';
 import PrimaryNavItem from '../NavItem';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 describe('<PrimaryNavItem />', () => {
 	it('should render a list item', () => {

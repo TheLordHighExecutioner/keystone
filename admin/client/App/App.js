@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { Container } from './elemental';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { css } from 'glamor';
 
 import MobileNavigation from './components/Navigation/Mobile';

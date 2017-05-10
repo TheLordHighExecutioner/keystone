@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const SecondaryNavItem = React.createClass({
 	displayName: 'SecondaryNavItem',

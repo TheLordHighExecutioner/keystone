@@ -4,7 +4,7 @@
 
 import React from 'react';
 import MobileListItem from './ListItem';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const MobileSectionItem = React.createClass({
 	displayName: 'MobileSectionItem',

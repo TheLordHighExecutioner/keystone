@@ -8,7 +8,7 @@
 import React from 'react';
 import { Center, Container, Spinner } from '../../elemental';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import { listsByKey } from '../../../utils/lists';
 import CreateForm from '../../shared/CreateForm';

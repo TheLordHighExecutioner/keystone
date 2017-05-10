@@ -5,7 +5,7 @@
 
 import React, { PropTypes } from 'react';
 import classnames from 'classnames';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const PrimaryNavItem = ({ children, className, href, label, title, to, active }) => {
 	const itemClassName = classnames('primary-navbar__item', className);

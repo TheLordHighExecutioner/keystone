@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import demand from 'must';
 import MobileSectionItem from '../SectionItem';
 import MobileListItem from '../ListItem';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 describe('<MobileSectionItem />', () => {
 	before(() => {

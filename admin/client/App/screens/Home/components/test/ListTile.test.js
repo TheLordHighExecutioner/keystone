@@ -3,7 +3,7 @@ import demand from 'must';
 import ListTile from '../ListTile';
 import { shallow } from 'enzyme';
 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 describe('<ListTile />', () => {
 	it('should render a div', () => {
